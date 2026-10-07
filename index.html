@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kirbz Tower — the vision. Four towers, two cities, one life goal. Alive before 2035.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="KIRBZ TOWER — The Vision">
+<meta property="og:description" content="The real one. The life goal. First of its kind — built to last centuries. Alive before 2035.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mynextdeal.github.io/kirbz-tower/">
+<meta property="og:image" content="https://mynextdeal.github.io/kirbz-tower/assets/kirbz-tower-01-K-hero-plus.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="675">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="assets/kirbz-logo-k-mark-clean.png">
+<title>KIRBZ TOWER — The Vision</title>
+<style>
+  :root{
+    --bg:#04060d; --panel:#0a0e1c; --panel2:#0d1224; --line:rgba(120,136,255,.16);
+    --text:#eef0fa; --muted:#98a1c4; --blue:#5a6cf0; --indigo:#2a2aa8;
+    --gold:#d9b45b; --gold-soft:rgba(217,180,91,.14);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:
+      radial-gradient(1400px 800px at 50% -300px, rgba(42,42,168,.32), transparent 70%),
+      radial-gradient(900px 500px at 90% 20%, rgba(217,180,91,.05), transparent 60%),
+      var(--bg);
+    color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .serif{font-family:Georgia,"Times New Roman",serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+  a{color:inherit;text-decoration:none}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(4,6,13,.72);border-bottom:1px solid var(--line)}
+  .navin{max-width:1180px;margin:0 auto;padding:12px 26px;display:flex;align-items:center;gap:18px}
+  .navin img{width:30px;height:30px;border-radius:8px;background:#fff;padding:3px}
+  .navin .brand{font-weight:700;letter-spacing:.16em;font-size:13px}
+  .navin .links{margin-left:auto;display:flex;gap:20px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .navin .links a:hover{color:var(--text)}
+  @media(max-width:760px){.navin .links{display:none}}
+
+  /* hero */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background:url('assets/kirbz-tower-06-K-aerial-plus.jpg') center 38%/cover no-repeat}
+  .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg, rgba(4,6,13,.62) 0%, rgba(4,6,13,.28) 40%, rgba(4,6,13,.86) 100%)}
+  .hero .inner{position:relative;padding:120px 26px 90px;max-width:900px}
+  .kicker{letter-spacing:.42em;font-size:11.5px;color:var(--muted);text-transform:uppercase}
+  h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(44px,8vw,86px);margin:18px 0 10px;letter-spacing:.04em;font-weight:400}
+  h1 em{font-style:normal;color:var(--blue)}
+  .hero .sub{font-size:clamp(16px,2.2vw,20px);color:#d6daf0;max-width:640px;margin:0 auto}
+  .hero .faith{margin-top:26px;color:var(--gold);letter-spacing:.2em;font-size:13px;text-transform:uppercase}
+  .hero .badge{display:inline-block;margin-top:30px;border:1px solid var(--gold);color:var(--gold);border-radius:999px;padding:8px 20px;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase}
+  .scroll{margin-top:54px;color:var(--muted);font-size:11px;letter-spacing:.3em;text-transform:uppercase}
+
+  /* sections */
+  section{padding:96px 0}
+  .k2{letter-spacing:.36em;font-size:11px;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+  h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(30px,4.4vw,44px);margin:0 0 18px;letter-spacing:.02em}
+  .lead{font-size:19px;color:#d9ddef;max-width:820px}
+  .body{color:#c3c9e4;max-width:820px;margin-top:16px}
+  .rule{width:64px;height:2px;background:var(--gold);opacity:.75;margin:26px 0}
+  .pull{font-family:Georgia,serif;font-size:clamp(22px,3.4vw,32px);line-height:1.45;color:#f2ecd9;border-left:3px solid var(--gold);padding-left:26px;margin:44px 0;max-width:860px}
+  .grid2{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));margin-top:34px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+  .card img{display:block;width:100%;height:auto}
+  .cap{padding:14px 18px 16px;font-size:14px;color:#ccd2ec}
+  .cap b{color:#fff;font-weight:600}
+  .cap .loc{color:var(--gold);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+
+  /* timeline */
+  .tl{margin-top:44px;border-left:1px solid rgba(217,180,91,.35);padding-left:34px;max-width:860px}
+  .tl .item{position:relative;padding:0 0 34px}
+  .tl .item:last-child{padding-bottom:0}
+  .tl .item:before{content:"";position:absolute;left:-40px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(217,180,91,.14)}
+  .tl .when{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  .tl .what{margin-top:5px;font-size:17px;color:#e6e9f7}
+  .tl .what span{color:var(--muted);font-size:15px}
+
+  /* spec grid */
+  .specs{display:grid;gap:2px;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));margin-top:40px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+  .spec{background:var(--panel);padding:26px 26px 28px}
+  .spec h3{margin:0 0 8px;font-size:16.5px;color:#fff;font-weight:600;letter-spacing:.01em}
+  .spec p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.6}
+  .band{margin-top:44px;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+  .band img{display:block;width:100%;height:auto}
+
+  /* interiors */
+  .trips{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));margin-top:36px}
+  .shot{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .shot img{display:block;width:100%;height:auto;cursor:zoom-in}
+  .shot .c{padding:11px 15px 13px;font-size:13.5px;color:#ccd2ec}
+  .shot .c b{color:#fff}
+  .shot .c .tag{color:var(--muted);font-size:12px}
+
+  /* map + stack */
+  .stack{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));margin-top:36px}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px}
+  .box h3{margin:0 0 14px;font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  .box ul{margin:0;padding:0;list-style:none}
+  .box li{padding:9px 0;border-bottom:1px dashed rgba(120,136,255,.14);color:#d5d9ee}
+  .box li:last-child{border-bottom:none}
+  .box li span{color:var(--muted)}
+  .route{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .route .stop{border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:13.5px;color:#d5d9ee}
+  .route .stop.next{border-color:var(--gold);color:var(--gold)}
+
+  /* empire */
+  .ventures{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));margin-top:34px}
+  .vent{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .vent b{display:block;font-size:15.5px;color:#fff}
+  .vent span{font-size:12.5px;color:var(--muted)}
+  .vent .st{display:inline-block;margin-top:9px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--muted)}
+  .vent .st.active{border-color:rgba(90,108,240,.5);color:#aab4ff}
+  .vent .st.gold{border-color:rgba(217,180,91,.5);color:var(--gold)}
+  .brandrow{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));margin-top:34px}
+  .brandrow .b{background:var(--panel2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .brandrow img{display:block;width:100%;height:auto;cursor:zoom-in}
+
+  /* legacy */
+  .legacy{text-align:center;background:
+      radial-gradient(900px 420px at 50% 0%, rgba(217,180,91,.10), transparent 70%),
+      var(--panel);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .legacy .big{font-family:Georgia,serif;font-size:clamp(34px,6vw,64px);letter-spacing:.04em;margin:10px 0 8px}
+  .legacy .big span{color:var(--gold)}
+  .legacy p{max-width:760px;margin:18px auto;color:#cfd4ea;font-size:17.5px}
+  .legacy .world{font-family:Georgia,serif;font-size:clamp(24px,3.6vw,36px);color:var(--gold);letter-spacing:.14em;margin-top:34px}
+  .legacy .dmw{margin-top:44px;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+  .legacy .dmw img{display:block;width:100%;height:auto;cursor:zoom-in}
+  .legacy .dmw .c{padding:12px 16px;font-size:13px;color:var(--muted);text-align:left}
+
+  /* guided */
+  .guided{text-align:center}
+  .guided .g{font-family:Georgia,serif;font-size:clamp(26px,4vw,40px);color:var(--gold);letter-spacing:.18em;margin:26px 0 6px}
+  .guided .gg{color:var(--muted);letter-spacing:.3em;font-size:12px;text-transform:uppercase}
+
+  /* gallery */
+  .galhead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .gal{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(330px,100%),1fr));margin-top:30px}
+  .g{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .g img{display:block;width:100%;height:auto;cursor:zoom-in}
+  .g .c{padding:10px 14px 12px;font-size:13px;color:#ccd2ec}
+  .g .c b{color:#fff}
+  .gsub{margin:46px 0 6px;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+
+  /* footer */
+  footer{padding:70px 0 90px;text-align:center;border-top:1px solid var(--line);margin-top:90px}
+  footer img{width:54px;height:54px;border-radius:12px;background:#fff;padding:5px}
+  footer .glory{margin-top:22px;color:var(--gold);letter-spacing:.34em;font-size:13px;text-transform:uppercase}
+  footer .src{margin-top:18px;color:var(--muted);font-size:12.5px;line-height:1.8}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* lightbox */
+  .lightbox{display:none;position:fixed;inset:0;z-index:100;background:rgba(2,3,8,.96);align-items:center;justify-content:center;cursor:zoom-out}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:96vw;max-height:96vh;width:auto;height:auto;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  .lb-hint{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:#8f98bd;font-size:12px;letter-spacing:.08em;white-space:nowrap}
+  @media(max-width:640px){.lb-hint{white-space:normal;max-width:92vw;text-align:center;line-height:1.5}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="navin">
+    <img src="assets/kirbz-logo-k-mark-clean.png" alt="KIRBZ">
+    <span class="brand">KIRBZ TOWER</span>
+    <div class="links">
+      <a href="#story">Story</a>
+      <a href="#towers">Towers</a>
+      <a href="#building">Building</a>
+      <a href="#life">Life</a>
+      <a href="#world">World</a>
+      <a href="#legacy">Legacy</a>
+      <a href="#gallery">Gallery</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="bg"></div><div class="veil"></div>
+  <div class="inner">
+    <div class="kicker">Kirbz Organization · Vision</div>
+    <h1>KIRBZ <em>TOWER</em></h1>
+    <p class="sub">The real one. The life goal. First of its kind — built to last centuries.</p>
+    <div class="faith">Guided by God's plan, every day.</div>
+    <div class="badge">Alive before 2035</div>
+    <div class="scroll">Scroll</div>
+  </div>
+</header>
+
+<!-- VISION -->
+<section id="vision">
+  <div class="wrap reveal">
+    <div class="k2">The Vision</div>
+    <h2>A show piece that stands out in the city.</h2>
+    <p class="lead">Kirbz Tower is the real building — the thing my whole life has been leading to. Hotel, condos, residences. Green walls and community floors. A free recording studio for artists. A free language school. An AI operating system running the entire tower. Built to last centuries.</p>
+    <p class="body">And it doesn't stop at one. Towers, plural — around the world. That's ultimately where everything is heading.</p>
+    <div class="pull">Developing my world.</div>
+  </div>
+</section>
+
+<!-- ORIGIN -->
+<section id="origin">
+  <div class="wrap reveal">
+    <div class="k2">The Origin</div>
+    <h2>I've been building my entire life.</h2>
+    <p class="lead">Legos on the floor. Tree forts in the branches. Climbing as high as the tree would let me. I've always loved skyscrapers and architecture — and I've always been fascinated with the Twin Towers. I wanted to be an architect.</p>
+    <p class="body">Life gave me a bigger title: developer. In the physical world — real estate. In the virtual world — software. Same word. Same person. Both worlds. Kirbz Tower is where those two lives stop being two.</p>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="wrap reveal">
+    <div class="k2">The Story</div>
+    <h2>Started over at 22.</h2>
+    <div class="tl">
+      <div class="item"><div class="when">Childhood</div><div class="what">Building everything — Legos, forts, trees. The architect dream begins.</div></div>
+      <div class="item"><div class="when">Age 22</div><div class="what">Started over. <span>Lost everything from the flips. Three months lost in downtown Tampa.</span></div></div>
+      <div class="item"><div class="when">June 2024</div><div class="what">The turn. <span>Officially into virtual real estate deals — and the marker I've kept every day since: guided by God's plan.</span></div></div>
+      <div class="item"><div class="when">October 1, 2024</div><div class="what">The proof. <span>My first virtual deal closed: $10,000.</span></div></div>
+      <div class="item"><div class="when">2026</div><div class="what">MyNextDeal — built entirely by my own hands. <span>The build clock passes 1,000+ hours.</span></div></div>
+      <div class="item"><div class="when">Today</div><div class="what">Two roads, one direction: <span>real estate (physical) and real estate software (virtual).</span></div></div>
+      <div class="item"><div class="when">2035</div><div class="what">Kirbz Tower alive.</div></div>
+    </div>
+    <div class="pull">"I've been inspired by Trump and a lot of other people — real estate is my calling in life, and I know that all of this will happen."</div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section id="proof">
+  <div class="wrap reveal">
+    <div class="k2">The Proof</div>
+    <h2>They don't have to take a chance on a promise.</h2>
+    <p class="lead">They look at MyNextDeal and realize one person built it. They hear the story — the house flips, the virtual deals, the Spanish — and something clicks. Not because I convinced them. Because the work already did.</p>
+    <p class="body">The proof is already here, and it's measured: 1,000+ hours on the build clock.</p>
+    <div class="pull">"The work is mine to do, but the path was given. Every day I work, it doesn't feel like work at all."</div>
+  </div>
+</section>
+
+<!-- TOWERS -->
+<section id="towers">
+  <div class="wrap reveal">
+    <div class="k2">The Family</div>
+    <h2>Four towers. Two cities. One vision.</h2>
+    <div class="grid2">
+      <div class="card"><img src="assets/kirbz-tower-01-K-hero-plus.jpg" alt="K Tower hero" loading="lazy">
+        <div class="cap"><span class="loc">Tampa</span><br><b>K Tower</b> — the mark itself, built: two volumes and two sky-braces forming a giant K, crowned by a glass sky-ring carrying the circle-K in brushed blue metal.</div></div>
+      <div class="card"><img src="assets/kirbz-tower-02-braid-hero-plus.jpg" alt="The Braid hero" loading="lazy">
+        <div class="cap"><span class="loc">Tampa Riverfront</span><br><b>The Braid</b> — three strands, stone and glass and living gardens, woven around each other and fused into one tower.</div></div>
+      <div class="card"><img src="assets/kirbz-tower-03-two-worlds-hero-plus.jpg" alt="Two Worlds hero" loading="lazy">
+        <div class="cap"><span class="loc">Miami</span><br><b>Two Worlds</b> — twin volumes, two worlds in one silhouette, rising off the bay at blue hour.</div></div>
+      <div class="card"><img src="assets/kirbz-tower-04-wave-hero-plus.jpg" alt="The Wave hero" loading="lazy">
+        <div class="cap"><span class="loc">Miami Beach</span><br><b>The Wave</b> — a tower that rises off the oceanfront like a wave at sunrise.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILDING -->
+<section id="building">
+  <div class="wrap reveal">
+    <div class="k2">The Building</div>
+    <h2>Built to last centuries. Not decades.</h2>
+    <div class="specs">
+      <div class="spec"><h3>LEED healthy-energy specifications</h3><p>Kind to the people inside it and the world around it.</p></div>
+      <div class="spec"><h3>Living green everywhere</h3><p>Green walls, gardens, and trees in the sky.</p></div>
+      <div class="spec"><h3>Every kind of home</h3><p>Affordable housing, condos, penthouses, a hotel — a vertical neighborhood where everyone belongs.</p></div>
+      <div class="spec"><h3>A free recording studio</h3><p>Where artists make real songs and collaborate. Music lives inside the building.</p></div>
+      <div class="spec"><h3>A free language school</h3><p>English, Spanish, Chinese — whatever people want, with incentives and prizes for fluency. Suelta Academy, given a campus.</p></div>
+      <div class="spec"><h3>An AI operating system for the tower</h3><p>The whole building runs on it — current, alive, futuristic.</p></div>
+      <div class="spec"><h3>Top-of-the-line amenities</h3><p>Sauna, cold plunge, coffee lounges — spaces built for people to stay a while.</p></div>
+      <div class="spec"><h3>Mixed-use at the base</h3><p>Restaurants and street life at the bottom of the tower.</p></div>
+      <div class="spec"><h3>A helipad at the top</h3><p>Because why not reach the sky twice.</p></div>
+      <div class="spec"><h3>AI robots helping around</h3><p>Quietly doing the work so people can do the living.</p></div>
+      <div class="spec"><h3>Community floors</h3><p>Floors designed for events, giving back, and bringing people together.</p></div>
+      <div class="spec"><h3>A legacy in stone and glass</h3><p>Standing long after I'm gone — carved into a skyline the world remembers.</p></div>
+    </div>
+    <div class="band"><img src="assets/kirbz-tower-12-two-worlds-aerial-plus.jpg" alt="Two Worlds aerial" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- LIFE -->
+<section id="life">
+  <div class="wrap reveal">
+    <div class="k2">The Life Inside</div>
+    <h2>I want everyone to want to stay here.</h2>
+    <p class="lead">Artists cutting songs at midnight. Business deals in the lounges. Live music performances that pull the whole building together. Community events. Giving back. Neighbors who know each other's names. Positivity as a design principle — a place that brings people together and makes them feel part of something.</p>
+    <p class="body">Not a building people pass through. A building people belong to.</p>
+    <div class="trips">
+      <div class="shot"><img src="assets/kirbz-tower-17-lobby-plus.jpg" alt="Lobby" loading="lazy"><div class="c"><b>Lobby</b> <span class="tag">· K Tower, Tampa</span></div></div>
+      <div class="shot"><img src="assets/kirbz-tower-18-community-plus.jpg" alt="Community floor" loading="lazy"><div class="c"><b>Community floor</b> <span class="tag">· The Braid, Tampa</span></div></div>
+      <div class="shot"><img src="assets/kirbz-tower-19-studio-plus.jpg" alt="Recording studio" loading="lazy"><div class="c"><b>Recording studio</b> <span class="tag">· The Wave, Miami Beach</span></div></div>
+      <div class="shot"><img src="assets/kirbz-tower-20-language-school-plus.jpg" alt="Language school" loading="lazy"><div class="c"><b>Language school — Suelta Academy</b> <span class="tag">· Two Worlds, Miami</span></div></div>
+      <div class="shot"><img src="assets/kirbz-tower-21-tower-brain-plus.jpg" alt="Tower brain" loading="lazy"><div class="c"><b>Tower brain</b> <span class="tag">· K Tower, Tampa</span></div></div>
+      <div class="shot"><img src="assets/kirbz-tower-22-sky-residences-plus.jpg" alt="Sky residences" loading="lazy"><div class="c"><b>Sky residences</b> <span class="tag">· Two Worlds, Miami</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORLD -->
+<section id="world">
+  <div class="wrap reveal">
+    <div class="k2">How It Happens</div>
+    <h2>The virtual version ships first. The physical one follows the money.</h2>
+    <div class="stack">
+      <div class="box">
+        <h3>The Stack That Builds It</h3>
+        <ul>
+          <li>MyNextDeal <span>— the data company</span></li>
+          <li>Conclavis <span>— the deal network</span></li>
+          <li>Kirbz Estates <span>— the real estate operation</span></li>
+          <li>Music income <span>— Spanish / English</span></li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>The Map</h3>
+        <p style="margin:0 0 12px;color:var(--muted);font-size:14.5px">Towers get numbered, city by city.</p>
+        <div class="route">
+          <span class="stop">Tampa</span>
+          <span class="stop">Miami</span>
+          <span class="stop">Texas</span>
+          <span class="stop">New York</span>
+          <span class="stop">Latin America</span>
+          <span class="stop next">Medellín — the 2027 bridge</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMPIRE -->
+<section id="empire">
+  <div class="wrap reveal">
+    <div class="k2">Behind It</div>
+    <h2>One flagship funding an empire of ventures.</h2>
+    <div class="ventures">
+      <div class="vent"><b>Kirbz Estates</b><span>the whole real estate operation</span><br><span class="st active">Active · Flagship</span></div>
+      <div class="vent"><b>MyNextDeal</b><span>the main build — the data company</span><br><span class="st active">Active · Main Build</span></div>
+      <div class="vent"><b>Kirbz Music</b><span>the journey — 621 hours logged</span><br><span class="st gold">Active Journey</span></div>
+      <div class="vent"><b>Kirbz Development</b><span>business development &amp; development plan</span><br><span class="st">Planned</span></div>
+      <div class="vent"><b>Kirbz Clothing</b><span>logo conceived</span><br><span class="st">Concept</span></div>
+      <div class="vent"><b>Kirbz Bank</b><span>early visuals</span><br><span class="st">Concept</span></div>
+      <div class="vent"><b>Kirbz Cast</b><span>two conceptions + logo</span><br><span class="st">Concept</span></div>
+      <div class="vent"><b>Kirbz Quarterz</b><span>conception art</span><br><span class="st">Concept</span></div>
+      <div class="vent"><b>Kirbz BNBS</b><span>conception art</span><br><span class="st">Concept</span></div>
+      <div class="vent"><b>Kirbz Coaching</b><span>folder established</span><br><span class="st">Concept</span></div>
+      <div class="vent"><b>Kirbz Developing My World</b><span>the vision</span><br><span class="st gold">Vision</span></div>
+    </div>
+    <div class="brandrow">
+      <div class="b"><img src="assets/kirbz-organization-mission-board.jpg" alt="Mission board" loading="lazy"></div>
+      <div class="b"><img src="assets/kirbz-estates-brand-board.jpg" alt="Brand board" loading="lazy"></div>
+      <div class="b"><img src="assets/kirbz-logo-k-circle.jpg" alt="K in circle" loading="lazy"></div>
+      <div class="b"><img src="assets/kirbz-development-logo-building.jpg" alt="Kirbz Development mark" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEGACY -->
+<section id="legacy" class="legacy">
+  <div class="wrap reveal">
+    <div class="k2">The Legacy</div>
+    <div class="big serif">KIRBZ TOWER <span>ALIVE BEFORE 2035</span></div>
+    <p>Within 10 to 15 years — before 35, or before 40. I know I can make this happen.</p>
+    <p>And when it's standing, it stays. Long after I'm gone, it's still there — a legacy carved into a skyline. Proof that one person built something the world remembers.</p>
+    <p>And it doesn't stop at one. Towers, plural. Around the globe.</p>
+    <div class="world">DEVELOPING MY WORLD</div>
+    <div class="dmw"><img src="assets/dmw-hero.jpg" alt="Developing My World" loading="lazy"><div class="c">The world being built — MyNextDeal · Conclavis · The Circuit</div></div>
+  </div>
+</section>
+
+<!-- GUIDED -->
+<section id="guided" class="guided">
+  <div class="wrap reveal">
+    <div class="k2">Guided</div>
+    <h2>This was never only my plan.</h2>
+    <p class="lead" style="margin:0 auto">Every idea in this tower, every door that's opened, every person I'm going to meet — I believe God lined them up. He's looking down on me every day, leading the path, giving me these ideas. My job is to build what He shows me.</p>
+    <p class="body" style="margin:18px auto 0">Guided by God's plan, every day — my marker since June 2024.</p>
+    <div class="g">GOD DID</div>
+    <div class="gg">All glory to God</div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap reveal">
+    <div class="galhead">
+      <div class="k2" style="margin:0">The Vision Set</div>
+    </div>
+    <h2>22 renders. 4 towers. Tampa &amp; Miami.</h2>
+    <p class="body">Every render in the Plus era of GPT Image 2.5 — the final set, October 2026.</p>
+
+    <div class="gsub">K Tower · Tampa</div>
+    <div class="gal">
+      <div class="g"><img src="assets/kirbz-tower-01-K-hero-plus.jpg" alt="K hero" loading="lazy"><div class="c"><b>01 · Hero</b> — sunset</div></div>
+      <div class="g"><img src="assets/kirbz-tower-05-K-night-plus.jpg" alt="K night" loading="lazy"><div class="c"><b>05 · Night</b> — blue hour</div></div>
+      <div class="g"><img src="assets/kirbz-tower-06-K-aerial-plus.jpg" alt="K aerial" loading="lazy"><div class="c"><b>06 · Aerial</b> — golden hour</div></div>
+      <div class="g"><img src="assets/kirbz-tower-07-K-street-plus.jpg" alt="K street" loading="lazy"><div class="c"><b>07 · Street</b> — early evening</div></div>
+    </div>
+
+    <div class="gsub">The Braid · Tampa Riverfront</div>
+    <div class="gal">
+      <div class="g"><img src="assets/kirbz-tower-02-braid-hero-plus.jpg" alt="Braid hero" loading="lazy"><div class="c"><b>02 · Hero</b></div></div>
+      <div class="g"><img src="assets/kirbz-tower-08-braid-night-plus.jpg" alt="Braid night" loading="lazy"><div class="c"><b>08 · Night</b> — blue hour</div></div>
+      <div class="g"><img src="assets/kirbz-tower-09-braid-aerial-plus.jpg" alt="Braid aerial" loading="lazy"><div class="c"><b>09 · Aerial</b> — morning</div></div>
+      <div class="g"><img src="assets/kirbz-tower-10-braid-street-plus.jpg" alt="Braid street" loading="lazy"><div class="c"><b>10 · Street</b> — midday</div></div>
+    </div>
+
+    <div class="gsub">Two Worlds · Miami</div>
+    <div class="gal">
+      <div class="g"><img src="assets/kirbz-tower-03-two-worlds-hero-plus.jpg" alt="Two Worlds hero" loading="lazy"><div class="c"><b>03 · Hero</b></div></div>
+      <div class="g"><img src="assets/kirbz-tower-11-two-worlds-night-plus.jpg" alt="Two Worlds night" loading="lazy"><div class="c"><b>11 · Night</b> — blue hour</div></div>
+      <div class="g"><img src="assets/kirbz-tower-12-two-worlds-aerial-plus.jpg" alt="Two Worlds aerial" loading="lazy"><div class="c"><b>12 · Aerial</b></div></div>
+      <div class="g"><img src="assets/kirbz-tower-13-two-worlds-street-plus.jpg" alt="Two Worlds street" loading="lazy"><div class="c"><b>13 · Street</b> — night</div></div>
+    </div>
+
+    <div class="gsub">The Wave · Miami Beach</div>
+    <div class="gal">
+      <div class="g"><img src="assets/kirbz-tower-04-wave-hero-plus.jpg" alt="Wave hero" loading="lazy"><div class="c"><b>04 · Hero</b> — sunrise</div></div>
+      <div class="g"><img src="assets/kirbz-tower-14-wave-night-plus.jpg" alt="Wave night" loading="lazy"><div class="c"><b>14 · Night</b> — moon over the ocean</div></div>
+      <div class="g"><img src="assets/kirbz-tower-15-wave-aerial-plus.jpg" alt="Wave aerial" loading="lazy"><div class="c"><b>15 · Aerial</b> — sunrise</div></div>
+      <div class="g"><img src="assets/kirbz-tower-16-wave-street-plus.jpg" alt="Wave street" loading="lazy"><div class="c"><b>16 · Street</b> — morning</div></div>
+    </div>
+
+    <div class="gsub">Inside The Tower</div>
+    <div class="gal">
+      <div class="g"><img src="assets/kirbz-tower-17-lobby-plus.jpg" alt="Lobby" loading="lazy"><div class="c"><b>17 · Lobby</b></div></div>
+      <div class="g"><img src="assets/kirbz-tower-18-community-plus.jpg" alt="Community floor" loading="lazy"><div class="c"><b>18 · Community floor</b></div></div>
+      <div class="g"><img src="assets/kirbz-tower-19-studio-plus.jpg" alt="Recording studio" loading="lazy"><div class="c"><b>19 · Recording studio</b></div></div>
+      <div class="g"><img src="assets/kirbz-tower-20-language-school-plus.jpg" alt="Language school" loading="lazy"><div class="c"><b>20 · Language school — Suelta Academy</b></div></div>
+      <div class="g"><img src="assets/kirbz-tower-21-tower-brain-plus.jpg" alt="Tower brain" loading="lazy"><div class="c"><b>21 · Tower brain</b></div></div>
+      <div class="g"><img src="assets/kirbz-tower-22-sky-residences-plus.jpg" alt="Sky residences" loading="lazy"><div class="c"><b>22 · Sky residences</b></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="assets/kirbz-logo-k-mark-clean.png" alt="KIRBZ">
+  <div style="margin-top:14px;letter-spacing:.2em;font-size:12px;color:var(--muted);text-transform:uppercase">Kirbz Tower — The Vision</div>
+  <div class="glory">All Glory to God</div>
+  <div class="src">
+    Renders: CameronAIBrain/Attachments/kirbz-tower-2026-10-06/ · Prompts: Kirbz Tower — gpt-image Master Prompt Pack<br>
+    Notes: Kirbz Tower — The Virtual HQ (Life Goal) · Moment — The Kirbz Tower &amp; World Vision (2026-10-06) · The Kirbz Organization
+  </div>
+</footer>
+
+<script>
+(function(){
+  if('scrollRestoration' in history){history.scrollRestoration='manual';}
+  function top(){window.scrollTo(0,0);}
+  top();window.addEventListener('load',top);
+  var lb=document.createElement('div');lb.className='lightbox';
+  var big=document.createElement('img');big.alt='';
+  var hint=document.createElement('div');hint.className='lb-hint';
+  hint.textContent=(window.matchMedia&&window.matchMedia('(pointer:coarse)').matches)?'TAP ANYWHERE TO CLOSE':'CLICK ANYWHERE OR PRESS ESC TO CLOSE · ← → TO NAVIGATE';
+  lb.appendChild(big);lb.appendChild(hint);document.body.appendChild(lb);
+  var current=-1;
+  function visible(){return Array.prototype.slice.call(document.images).filter(function(i){return i!==big&&i.offsetParent!==null;});}
+  function show(i){var list=visible();if(!list.length)return;current=(i+list.length)%list.length;big.src=list[current].currentSrc||list[current].src;lb.classList.add('open');}
+  function close(){lb.classList.remove('open');big.src='';}
+  document.addEventListener('click',function(e){var t=e.target;if(t&&t.tagName==='IMG'&&t!==big){var list=visible();current=list.indexOf(t);if(current>-1){big.src=t.currentSrc||t.src;lb.classList.add('open');}}});
+  lb.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){close();}
+    else if(lb.classList.contains('open')&&e.key==='ArrowRight'){show(current+1);}
+    else if(lb.classList.contains('open')&&e.key==='ArrowLeft'){show(current-1);}
+  });
+  var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
